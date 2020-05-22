@@ -1,0 +1,120 @@
+/* variables */
+:root {
+    --primary-color:#3d155f;
+    --secondary-color: #df678c;
+    --complementary-purple: #8712E0;
+}
+
+/* fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    width: 100%;
+    background-color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 99%;
+    padding: 5px;
+}
+
+.hero_container {
+    width:85%;
+    margin: 35px auto;
+    text-align: center;
+}
+.hero_container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hero_animal {
+    display: inline-block;
+    width: 30%;
+    min-width: 85px;
+    max-width: 150px;
+}
+
+.hero_menu {
+    display: inline-block;
+    width: 10%;
+    max-width: 60px;
+    padding-top: .5em;
+    cursor: pointer;
+}
+.hero_logo {
+    width: 85%;
+    min-width: 170px;
+}
+
+.hero_tagline {
+    margin: -10px 0 10px 0;
+    color: rgba(255, 255, 255, 0.877);
+    width: 90%;
+    font-size: 3.7vw;
+    font-weight: 400;
+    letter-spacing: .3em;
+    margin-left: 9%;
+}
+
+.signin {
+    background-color: var(--secondary-color);
+    height: 35vh;
+    width: 100%;
+    margin: 0;
+}
+
+.signin_form {
+    background-color: var(--primary-color);
+    width: 70%;
+    margin: 15px auto;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.signin_input {
+    display: inline-block;
+    color: white;
+    padding: .5em .75em;
+    margin: 10px;
+    width: 68%;
+    border-radius: 5px;
+    border:none;
+    background-color: var(--secondary-color);
+    outline: 0;
+    text-align: center;
+    font-weight: 200;
+}
+
+.signin_input::placeholder {
+    color: white;
+}
+
+.signin_btn {
+    color:white;
+    background-color: rgba(135, 18, 224, 0.7);
+    padding: .2em .5em;
+    border:none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.signin_btn:hover {
+    background-color:var(--complementary-purple);
+    color: white;
+}
+
+.signin_signup {
+    color:var(--secondary-color);
+    font-size: .6rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
