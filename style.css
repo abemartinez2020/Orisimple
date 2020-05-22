@@ -5,7 +5,7 @@
     --complementary-purple: #8712E0;
 }
 
-/* defaults */
+/* default resets */
 *{
     margin: 0;
     padding: 0;
@@ -39,6 +39,60 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.hero_menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-top: 20px;
+    
+}
+
+.menu_burger {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    border-radius: 5px;
+    background: var(--complementary-purple);
+    transition: all .5s ease-in-out;
+}
+
+.menu_burger::before, .menu_burger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--complementary-purple);
+    transition: all .5s ease-in-out;
+}
+
+.menu_burger::before {
+    transform: translateY(-16px);
+}
+
+.menu_burger::after {
+    transform: translateY(16px);
+}
+
+/* Menu_burger animation */
+.menu_burger--open .menu_burger {
+    transform: translateX(-15px);
+    background: transparent;
+}
+
+.menu_burger--open .menu_burger::before {
+    transform: rotate(45deg) translate(10px, -10px)
+}
+
+.menu_burger--open .menu_burger::after {
+    transform: rotate(-45deg) translate(10px, 10px)
 }
 
 .hero_animal {
