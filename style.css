@@ -22,6 +22,12 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
 
 /*mobile-first*/
 
@@ -46,17 +52,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35%;
+    width: 10%;
+    flex-shrink: 0;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    margin-top: 20px;
+    margin-top: 5px;
     
 }
 
+.list-disp {
+    display:flex;
+    color: white;
+    list-style-type: none;
+    justify-content: space-between;
+    transition: all .5s ease-in-out
+}
+
+
+.hero_menu_item {
+    padding: 0 .5em;
+    margin: 0 .2em;
+    border-top: 1px solid var(--complementary-purple) ;
+    font-size: 15px;
+    border-radius: 5px 5px 0 0;
+}
+
+.hero_menu_item:hover {
+    background-color: rgba(135, 18, 224, 0.7);
+}
 .menu_burger {
-    width: 100%;
+    width: 30px;
     height: 5px;
     position: absolute;
+    right: 20px;
+    top: 10px;
     border-radius: 5px;
     background: var(--complementary-purple);
     transition: all .5s ease-in-out;
@@ -66,7 +95,7 @@ body {
     content: '';
     display: block;
     position: absolute;
-    width: 100%;
+    width: 30px;
     height: 5px;
     border-radius: 5px;
     background: var(--complementary-purple);
@@ -82,33 +111,37 @@ body {
 }
 
 /* Menu_burger animation */
-.menu_burger--open .menu_burger {
+.menu--open {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu--off {
+    display:none;
+}
+.menu--open .menu_burger {
     transform: translateX(-15px);
     background: transparent;
 }
 
-.menu_burger--open .menu_burger::before {
+.menu--open .menu_burger::before {
     transform: rotate(45deg) translate(10px, -10px)
 }
 
-.menu_burger--open .menu_burger::after {
+.menu--open .menu_burger::after {
     transform: rotate(-45deg) translate(10px, 10px)
 }
+
+
 
 .hero_animal {
     display: inline-block;
     width: 30%;
-    min-width: 85px;
+    min-width: 15px;
     max-width: 150px;
 }
 
-.hero_menu {
-    display: inline-block;
-    width: 10%;
-    max-width: 60px;
-    padding-top: .5em;
-    cursor: pointer;
-}
 .hero_logo {
     width: 85%;
     min-width: 170px;
@@ -126,7 +159,7 @@ body {
 
 .signin {
     background-color: var(--secondary-color);
-    height: 35vh;
+    height: 40vh;
     width: 100%;
     margin: 0;
 }
@@ -137,16 +170,16 @@ body {
     margin: -1px auto;
     border-radius: 0 0 10px 10px;
     text-align: center;
-    padding: 15px 0;
+    padding: 25px 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .signin_input {
-    display: inline-block;
+    display: block;
     color: white;
     padding: .5em .75em;
-    margin: 10px 15px;
-    width: 70%;
+    margin: 10px auto;
+    width: 65%;
     border-radius: 5px;
     border:none;
     background-color: var(--secondary-color);
@@ -166,6 +199,7 @@ body {
     border:none;
     border-radius: 5px;
     margin: 10px 0;
+    outline: none;
     cursor: pointer;
 }
 
@@ -179,4 +213,43 @@ body {
     font-size: .58rem;
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Small Tablets */
+@media screen and (min-width:545px) {
+    .signin_input {
+        display: inline-block;
+        width: 41%;
+    }
+    .signin_btn {
+        display: block;
+        width: 50%;
+        margin: 10px auto;
+    }
+}
+
+/* Large Tablets */
+@media screen and (min-width: 900px) {
+    .hero_menu_item {
+        font-size: 23px;
+    }
+
+    .hero_tagline {
+        font-size: 30px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:1120px ) {
+    .hero {
+        height:100vh;
+    }
+    .signin {
+       background-color: var(--primary-color);
+       padding: 100px;
+    }
+
+    .signin_form {
+        box-shadow: none;
+    }
 }
