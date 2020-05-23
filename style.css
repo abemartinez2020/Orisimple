@@ -145,6 +145,7 @@ a {
 .hero_logo {
     width: 85%;
     min-width: 170px;
+    margin: 0 auto;
 }
 
 .hero_tagline {
@@ -253,3 +254,36 @@ a {
         box-shadow: none;
     }
 }
+
+/* Animation */
+.st0{fill:#DE668C;}
+.st1{fill:#3D145F;stroke:#3C145F;stroke-width:0.1721;}
+.st2{fill:#DE678C;stroke:#3C145F;stroke-width:0.1721;}
+.st3{fill:#DE678C;}
+
+
+@keyframes fold {
+    from{ fill:#DE678C}
+    to{fill: transparent}
+}
+
+#left-fold{
+    
+    animation-name: fold;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    transition: fill 2s;
+}
+
+#right-fold{
+    
+    animation-name: fold;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .75s;
+    animation-fill-mode: forwards;
+    transition: fill 1s;
+}
+
